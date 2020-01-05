@@ -77,7 +77,141 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/12/16/Java_Collection_ArrayList/" title="" itemprop="url"></a>
+      <a href="/2019/03/11/新文档/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="supertheme" target="_blank" itemprop="author">supertheme</a>
+		
+  <p class="article-time">
+    <time datetime="2019-03-11T14:42:08.843Z" itemprop="datePublished"> Published 2019-03-11</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="var-的奇怪作用域"><a href="#var-的奇怪作用域" class="headerlink" title="var 的奇怪作用域"></a>var 的奇怪作用域</h3><p>function f(shouldInitialize: boolean) {<br>if (shouldInitialize) {<br>var x = 10;<br>}</p>
+<p>return x;<br>}</p>
+<p>f(true);  // returns ‘10’<br>f(false); // returns ‘undefined’</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/12/30/springboot/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="supertheme" target="_blank" itemprop="author">supertheme</a>
+		
+  <p class="article-time">
+    <time datetime="2018-12-30T11:44:05.571Z" itemprop="datePublished"> Published 2018-12-30</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>##springboot的目标</p>
+<ol>
+<li>为所有Spring开发者提供一个更快且更广泛的入门体验</li>
+<li>开箱即用且能快速应对需求的变化(开闭原则)</li>
+<li>提供一系列与原先大型项目等价的基础服务(嵌入式中间件,security health check)</li>
+<li>消除XML配置<br>##环境搭建</li>
+</ol>
+<ul>
+<li>Springboot 2.1.1.RELEASE</li>
+<li>JAVA 8</li>
+<li>Spring Framework 5.1.3.RELEASE</li>
+<li>Maven 3.3+</li>
+<li>Tomcat 9.0</li>
+</ul>
+<h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h3><ol>
+<li>因为spring默认el表达式的占位符是${..}风格的，所有如果要使用Maven filtering,请使用@..@的格式，或者在maven propert中重新定义resource.delimiter</li>
+</ol>
+<h3 id="Externalized-Configuration"><a href="#Externalized-Configuration" class="headerlink" title="Externalized Configuration"></a>Externalized Configuration</h3><ul>
+<li>配置随机值</li>
+</ul>
+<ol>
+<li><strong>RandomValuePropertySource</strong> 可以使用${random.value}等表达式配置随机值</li>
+</ol>
+<ul>
+<li>获取命令行参数值</li>
+</ul>
+<ol>
+<li>SpringApplication将命令行参数(以–开头)转化为Property，并且可以通过<strong>Environment</strong>访问到,如果不希望Environment访问到，可以配置如下：SpringApplication.setAddCommandLineProperties(false)</li>
+</ol>
+<ul>
+<li>配置文件</li>
+</ul>
+<p>1. </p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/12/16/Java_Collection_ArrayList/" title="ArrayList" itemprop="url">ArrayList</a>
   </h1>
   <p class="article-author">By
        
@@ -95,14 +229,39 @@
 <li>ArrayList简介</li>
 <li>ArrayList源码分析</li>
 <li>ArrayList扩容机制</li>
-<li>fail-fast机制(如何在循环中删除ArrayList中的元素?）</li>
 </ul>
 </blockquote>
-<h2 id="ArrayList简介"><a href="#ArrayList简介" class="headerlink" title="ArrayList简介"></a>ArrayList简介</h2><p>###1.    ArrayList可以理解成一个”动态数组”，由于Java中数组都是固定大小的，但ArrayList是一个可以动态的添加和删除元素的List,其底层仍然是由数组实现的。ArrayList继承自AbstractList，并且实现了List,RandomAccess,Cloneable,Serializable这四个接口。</p>
-<p>###2.    ArrayList与Vector有很大的相似性，最大的区别在于ArrayList是线程不安全的，而Vector是线程安全的。</p>
-<p>###3.    ArrayList与LinkedList同样也有很大的相似性，二者作为List的主要两个实现类，主要区别在于ArrayList的add/remove操作慢，而get操作快，而LinkedList则恰好相反，究其原因还是在于底层实现一个是数组，一个是链表</p>
-<h2 id="ArrayList源码分析"><a href="#ArrayList源码分析" class="headerlink" title="ArrayList源码分析"></a>ArrayList源码分析</h2><pre><code>ArrayList内部持有
-</code></pre><h2 id="ArrayList扩容机制"><a href="#ArrayList扩容机制" class="headerlink" title="ArrayList扩容机制"></a>ArrayList扩容机制</h2>
+<h2 id="ArrayList简介"><a href="#ArrayList简介" class="headerlink" title="ArrayList简介"></a>ArrayList简介</h2><hr>
+<ol>
+<li>ArrayList可以理解成一个”动态数组”，由于Java中数组都是固定大小的，但ArrayList是一个可以动态的添加和删除元素的List,其底层仍然是由数组实现的。ArrayList继承自AbstractList，并且实现了List,RandomAccess,Cloneable,Serializable这四个接口。</li>
+<li>ArrayList与Vector有很大的相似性，最大的区别在于ArrayList是线程不安全的，而Vector是线程安全的，若要使用线程安全的，请使用<code>List list = Collections.synchronizedList(new ArrayList(...));</code></li>
+<li>ArrayList与LinkedList同样也有很大的相似性，二者作为List的主要两个实现类，主要区别在于ArrayList的add/remove操作慢，而get操作快，而LinkedList则恰好相反，究其原因还是在于底层实现一个是数组，一个是链表<h2 id="ArrayList源码分析"><a href="#ArrayList源码分析" class="headerlink" title="ArrayList源码分析"></a>ArrayList源码分析</h2></li>
+</ol>
+<hr>
+<h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><p>ArrayList内部持有Object[]来作为存储容器，其默认的CAPACITY大小为10，最大的容量为Integer.MAX_VALUE<br><img src="arraylist_1.png" alt="ArrayList的成员变量"></p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>ArrayList为我们提供了3种构造方法，分别是：</p>
+<ol>
+<li>指定初始容量的构造方法</li>
+<li>无参构造方法</li>
+<li>使用特定集合的构造方法</li>
+</ol>
+<p>第一种为elementData初始化成对应的指定容量大小，第二种直接构造一个空的elementData，第三种则是通过<code>Arrays.copyof</code>来初始话elementData并赋值<br><img src="arraylist_2.png" alt="ArrayList构造方法"></p>
+<h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><p>由于ArrayList本身的底层实现是数组，所以对于其操作的add remove get  set 等方法全部都是基于数据元素的操作，从源码截取了几个方法，本身逻辑均不复杂<br><img src="arraylist_3.png" alt="ArrayList中的add、set"></p>
+<p>remove方法:<br><img src="arraylist_4.png" alt="ArrayList中的remove"></p>
+<h3 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h3><p>ArrayList还内置了三个内部类来帮助我们完成一些其他的操作，其中包含实现了Iterator接口的Itr，实现了ListIterator接口的ListItr，还有一个SubList</p>
+<h4 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h4><p>由于Itr和ListItr只是实现的接口略有差异，在此截取了Itr执行remove的代码片段，我们可以看到，在Itr内部中含有一个新的expectedModCount变量，其初始值为modCount，<br>在执行remove操作的时候，会先进行判断expectedModCount与modCount是否相等，若相等，则执行remove操作，若不相等，则会抛出ConcurrentModificationException异常，相信小伙伴们对这个异常并不陌生，<br>平时在代码中对List写foreach循环的时候，若执行了remove操作，则就会遇见该异常了，而如果使用Iterator去执行remove操作，就可以正常删除了。原因就在于此哈。<br><img src="arraylist_5.png" alt="ArrayList中的Iterator"></p>
+<h4 id="SubList"><a href="#SubList" class="headerlink" title="SubList"></a>SubList</h4><p>ArrayList提供了SubList的内部类，其主要作用是提供对于List子集合的一个视图，我们需要注意的是，这仅仅是一个视图（与数据库里的概念类似）,任何对原List的操作均会体现在SubList上，而任何在SubList上的操作也会同样<br>的反应到List上，因为其本质上都是对同一个elementData做操作，因此，我们在进行add、remove等structurally modified的操作时，一定要特别注意subList也会进行相应的变化<br><img src="arraylist_6.png" alt="ArrayList中的SubList"></p>
+<h2 id="ArrayList扩容机制"><a href="#ArrayList扩容机制" class="headerlink" title="ArrayList扩容机制"></a>ArrayList扩容机制</h2><hr>
+<p>为了充分的利用内存空间，代码规范也会让我们在初始化ArrayList就为其指定capacity，因此，我们有必要也了解一下ArrayList中的扩容机制，在执行add，addAll等操作时，会进行capacity的check，与当前elementData的size进行对比，<br>若需要扩容，则会<code>newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1)</code>，新容量将会是旧容量的1.5倍<br><img src="arraylist_7.png" alt="ArrayList中的扩容"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
+<ol>
+<li>ArrayList的底层实现是数组</li>
+<li>ArrayList是非线程安全的</li>
+<li>ArrayList最好在初始化时就为其指定容量大小，每次在做add操作时，会触发容量检查，若当前数组小于元素个数时，会新申请1.5倍的数组空间，将原有数组复制</li>
+<li>ArrayList遵循 fail-fast 机制，在执行add remove 等结构性修改的操作时，会抛出异常，若要在遍历过程中添加或修改元素，可以使用迭代器</li>
+<li>ArrayList提供的subList方法实际上是返回的是其一个内部类，底层仍然指向同一片数组空间，只是作为视图使用，无论对List本身操作或者对SubList操作，二者相互之间均彼此影响</li>
+</ol>
+
         
         
         <p class="article-more-link">
@@ -112,6 +271,11 @@
     <footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java-collection/">java,collection</a>
+  </div>
 
 </div>
 
@@ -204,6 +368,17 @@
   
 
   
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/java-collection/" title="java,collection">java,collection<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
 
   <div class="linkslist">
   <p class="asidetitle">Links</p>
@@ -250,7 +425,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
 		
 		<a href="/about" target="_blank" title="supertheme">supertheme</a>
 		
