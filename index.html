@@ -77,6 +77,91 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/Java_Collection_LinkedList/" title="LinkedList" itemprop="url">LinkedList</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="supertheme" target="_blank" itemprop="author">supertheme</a>
+		
+  <p class="article-time">
+    <time datetime="2020-01-10T13:00:01.148Z" itemprop="datePublished"> Published 2020-01-10</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <blockquote>
+<ul>
+<li>LinkedList简介</li>
+<li>LinkedList源码分析</li>
+<li>LinekdList常见操作总结</li>
+</ul>
+</blockquote>
+<h2 id="LinkedList简介"><a href="#LinkedList简介" class="headerlink" title="LinkedList简介"></a>LinkedList简介</h2><hr>
+<ol>
+<li>LinkedList作为List的一个实现，与ArrayList采用数组作为数据存储不一样的是，其采用了链表Node作为底层的数据存储</li>
+<li>LinkedList不单单实现了List接口，而且也实现了Deque接口，所以可以把其当做一个双向队列使用</li>
+<li>LinkedList允许存放Null值</li>
+<li>LinkedList由于采用了链表作为数据存储,所以最显著的特性在于插入快，但查询慢，这一点恰恰与ArrayList相反</li>
+</ol>
+<h2 id="LinkedList源码分析"><a href="#LinkedList源码分析" class="headerlink" title="LinkedList源码分析"></a>LinkedList源码分析</h2><hr>
+<h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><p>LinkedList内部持有Node来作为存储容器，我们可以看到Node的源码本身就是个双向链表的实现，在每个Node中，存放了当前节点的值，以及前一个节点prev以及后一个节点next<br><img src="./linkedlist_3.png" alt="LinkedList中的Node"><br>在LinkedList内部的成员变量中，则只存放了first node 和 last node<br><img src="./linkedlist_1.png" alt="LinkedList成员变量"></p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>LinkedList为我们提供了2种构造方法，分别是：</p>
+<ol>
+<li>无参构造方法</li>
+<li>使用特定集合的构造方法</li>
+</ol>
+<p>第一种为LinkedList初始化，其中不含任何node，第二种直接使用Collection中的元素填充到LinkedList<br><img src="./linkedlist_2.png" alt="LinkedList构造方法"></p>
+<h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><p>LinkedList由于实现了Deque操作，因此其含有众多的队列操作方法，在此我们简单的看一下其add remove方法是如何实现的。<br>add方法:<br><img src="./linkedlist_4.png" alt="linkedlist add"><br>remove方法:<br>remove方法只会移除第一个相等的元素哟！<br><img src="./linkedlist_5.png" alt="linkedlist remove"></p>
+<h3 id="队列操作"><a href="#队列操作" class="headerlink" title="队列操作"></a>队列操作</h3><p>linkedlist提供了基础的队列操作，总结如下:<br><img src="./attachments/1578752303531.table.html" alt="linkedlist中的队列操作"><br><img src="./attachments/1578753285668.table.html" alt="linkedlist总的队列操作2"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
+<ol>
+<li>LinkedList的底层实现是链表</li>
+<li>LinkedList是非线程安全的</li>
+<li>LinkedList遵循 fail-fast 机制，在执行add remove 等结构性修改的操作时，会抛出异常，若要在遍历过程中添加或修改元素，可以使用迭代器</li>
+<li>LinkedList实现了Deque接口，所以我们可以把其当做一个双向队列的数据接口来使用</li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java-collection/">java,collection</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/新文档/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
@@ -374,6 +459,10 @@
 		
 			
 				<li><a href="/tags/collection/" title="collection">collection<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-collection/" title="java,collection">java,collection<sup>1</sup></a></li>
 			
 		
 		</ul>
