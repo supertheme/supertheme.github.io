@@ -112,7 +112,7 @@
 <li>使用特定集合的构造方法</li>
 </ol>
 <p>第一种为LinkedList初始化，其中不含任何node，第二种直接使用Collection中的元素填充到LinkedList<br><img src="../images/linkedlist_2.png" alt="LinkedList构造方法"></p>
-<h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><p>LinkedList由于实现了Deque操作，因此其含有众多的队列操作方法，在此我们简单的看一下其add remove方法是如何实现的。<br>add方法:<br><img src="./linkedlist_4.png" alt="linkedlist add"><br>remove方法:<br>remove方法只会移除第一个相等的元素哟！<br><img src="./linkedlist_5.png" alt="linkedlist remove"></p>
+<h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><p>LinkedList由于实现了Deque操作，因此其含有众多的队列操作方法，在此我们简单的看一下其add remove方法是如何实现的。<br>add方法:<br><img src="../images/linkedlist_4.png" alt="linkedlist add"><br>remove方法:<br>remove方法只会移除第一个相等的元素哟！<br><img src="../images/linkedlist_5.png" alt="linkedlist remove"></p>
 <h3 id="队列操作"><a href="#队列操作" class="headerlink" title="队列操作"></a>队列操作</h3><p>linkedlist提供了基础的队列操作，总结如下:<br><img src="../attachments/linkedlist.table1.html" alt="linkedlist queue操作"><br><img src="../attachments/linkedlist.table2.html" alt="linkedlist queue操作"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
 <ol>
@@ -323,21 +323,21 @@
 <li>ArrayList与LinkedList同样也有很大的相似性，二者作为List的主要两个实现类，主要区别在于ArrayList的add/remove操作慢，而get操作快，而LinkedList则恰好相反，究其原因还是在于底层实现一个是数组，一个是链表<h2 id="ArrayList源码分析"><a href="#ArrayList源码分析" class="headerlink" title="ArrayList源码分析"></a>ArrayList源码分析</h2></li>
 </ol>
 <hr>
-<h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><p>ArrayList内部持有Object[]来作为存储容器，其默认的CAPACITY大小为10，最大的容量为Integer.MAX_VALUE<br><img src="./arraylist_1.png" alt="ArrayList的成员变量"></p>
+<h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><p>ArrayList内部持有Object[]来作为存储容器，其默认的CAPACITY大小为10，最大的容量为Integer.MAX_VALUE<br><img src="../images/arraylist_1.png" alt="ArrayList的成员变量"></p>
 <h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>ArrayList为我们提供了3种构造方法，分别是：</p>
 <ol>
 <li>指定初始容量的构造方法</li>
 <li>无参构造方法</li>
 <li>使用特定集合的构造方法</li>
 </ol>
-<p>第一种为elementData初始化成对应的指定容量大小，第二种直接构造一个空的elementData，第三种则是通过<code>Arrays.copyof</code>来初始话elementData并赋值<br><img src="arraylist_2.png" alt="ArrayList构造方法"></p>
-<h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><p>由于ArrayList本身的底层实现是数组，所以对于其操作的add remove get  set 等方法全部都是基于数据元素的操作，从源码截取了几个方法，本身逻辑均不复杂<br><img src="arraylist_3.png" alt="ArrayList中的add、set"></p>
-<p>remove方法:<br><img src="arraylist_4.png" alt="ArrayList中的remove"></p>
+<p>第一种为elementData初始化成对应的指定容量大小，第二种直接构造一个空的elementData，第三种则是通过<code>Arrays.copyof</code>来初始话elementData并赋值<br><img src="../images/arraylist_2.png" alt="ArrayList构造方法"></p>
+<h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><p>由于ArrayList本身的底层实现是数组，所以对于其操作的add remove get  set 等方法全部都是基于数据元素的操作，从源码截取了几个方法，本身逻辑均不复杂<br><img src="../images/arraylist_3.png" alt="ArrayList中的add、set"></p>
+<p>remove方法:<br><img src="../images/arraylist_4.png" alt="ArrayList中的remove"></p>
 <h3 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h3><p>ArrayList还内置了三个内部类来帮助我们完成一些其他的操作，其中包含实现了Iterator接口的Itr，实现了ListIterator接口的ListItr，还有一个SubList</p>
-<h4 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h4><p>由于Itr和ListItr只是实现的接口略有差异，在此截取了Itr执行remove的代码片段，我们可以看到，在Itr内部中含有一个新的expectedModCount变量，其初始值为modCount，<br>在执行remove操作的时候，会先进行判断expectedModCount与modCount是否相等，若相等，则执行remove操作，若不相等，则会抛出ConcurrentModificationException异常，相信小伙伴们对这个异常并不陌生，<br>平时在代码中对List写foreach循环的时候，若执行了remove操作，则就会遇见该异常了，而如果使用Iterator去执行remove操作，就可以正常删除了。原因就在于此哈。<br><img src="arraylist_5.png" alt="ArrayList中的Iterator"></p>
-<h4 id="SubList"><a href="#SubList" class="headerlink" title="SubList"></a>SubList</h4><p>ArrayList提供了SubList的内部类，其主要作用是提供对于List子集合的一个视图，我们需要注意的是，这仅仅是一个视图（与数据库里的概念类似）,任何对原List的操作均会体现在SubList上，而任何在SubList上的操作也会同样<br>的反应到List上，因为其本质上都是对同一个elementData做操作，因此，我们在进行add、remove等structurally modified的操作时，一定要特别注意subList也会进行相应的变化<br><img src="arraylist_6.png" alt="ArrayList中的SubList"></p>
+<h4 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h4><p>由于Itr和ListItr只是实现的接口略有差异，在此截取了Itr执行remove的代码片段，我们可以看到，在Itr内部中含有一个新的expectedModCount变量，其初始值为modCount，<br>在执行remove操作的时候，会先进行判断expectedModCount与modCount是否相等，若相等，则执行remove操作，若不相等，则会抛出ConcurrentModificationException异常，相信小伙伴们对这个异常并不陌生，<br>平时在代码中对List写foreach循环的时候，若执行了remove操作，则就会遇见该异常了，而如果使用Iterator去执行remove操作，就可以正常删除了。原因就在于此哈。<br><img src="../images/arraylist_5.png" alt="ArrayList中的Iterator"></p>
+<h4 id="SubList"><a href="#SubList" class="headerlink" title="SubList"></a>SubList</h4><p>ArrayList提供了SubList的内部类，其主要作用是提供对于List子集合的一个视图，我们需要注意的是，这仅仅是一个视图（与数据库里的概念类似）,任何对原List的操作均会体现在SubList上，而任何在SubList上的操作也会同样<br>的反应到List上，因为其本质上都是对同一个elementData做操作，因此，我们在进行add、remove等structurally modified的操作时，一定要特别注意subList也会进行相应的变化<br><img src="../images/arraylist_6.png" alt="ArrayList中的SubList"></p>
 <h2 id="ArrayList扩容机制"><a href="#ArrayList扩容机制" class="headerlink" title="ArrayList扩容机制"></a>ArrayList扩容机制</h2><hr>
-<p>为了充分的利用内存空间，代码规范也会让我们在初始化ArrayList就为其指定capacity，因此，我们有必要也了解一下ArrayList中的扩容机制，在执行add，addAll等操作时，会进行capacity的check，与当前elementData的size进行对比，<br>若需要扩容，则会<code>newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1)</code>，新容量将会是旧容量的1.5倍<br><img src="arraylist_7.png" alt="ArrayList中的扩容"></p>
+<p>为了充分的利用内存空间，代码规范也会让我们在初始化ArrayList就为其指定capacity，因此，我们有必要也了解一下ArrayList中的扩容机制，在执行add，addAll等操作时，会进行capacity的check，与当前elementData的size进行对比，<br>若需要扩容，则会<code>newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1)</code>，新容量将会是旧容量的1.5倍<br><img src="../images/arraylist_7.png" alt="ArrayList中的扩容"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
 <ol>
 <li>ArrayList的底层实现是数组</li>
