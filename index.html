@@ -105,20 +105,15 @@
 <li>LinkedList由于采用了链表作为数据存储,所以最显著的特性在于插入快，但查询慢，这一点恰恰与ArrayList相反</li>
 </ol>
 <h2 id="LinkedList源码分析"><a href="#LinkedList源码分析" class="headerlink" title="LinkedList源码分析"></a>LinkedList源码分析</h2><hr>
-<h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><p>LinkedList内部持有Node来作为存储容器，我们可以看到Node的源码本身就是个双向链表的实现，在每个Node中，存放了当前节点的值，以及前一个节点prev以及后一个节点next<br><img src="./linkedlist_3.png" alt="LinkedList中的Node"><br>在LinkedList内部的成员变量中，则只存放了first node 和 last node<br><img src="./linkedlist_1.png" alt="LinkedList成员变量"></p>
+<h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><p>LinkedList内部持有Node来作为存储容器，我们可以看到Node的源码本身就是个双向链表的实现，在每个Node中，存放了当前节点的值，以及前一个节点prev以及后一个节点next<br><img src="../images/linkedlist_3.png" alt="LinkedList中的Node"><br>在LinkedList内部的成员变量中，则只存放了first node 和 last node<br><img src="../images/linkedlist_1.png" alt="LinkedList成员变量"></p>
 <h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>LinkedList为我们提供了2种构造方法，分别是：</p>
 <ol>
 <li>无参构造方法</li>
 <li>使用特定集合的构造方法</li>
 </ol>
-<p>第一种为LinkedList初始化，其中不含任何node，第二种直接使用Collection中的元素填充到LinkedList<br><img src="./linkedlist_2.png" alt="LinkedList构造方法"></p>
+<p>第一种为LinkedList初始化，其中不含任何node，第二种直接使用Collection中的元素填充到LinkedList<br><img src="../images/linkedlist_2.png" alt="LinkedList构造方法"></p>
 <h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><p>LinkedList由于实现了Deque操作，因此其含有众多的队列操作方法，在此我们简单的看一下其add remove方法是如何实现的。<br>add方法:<br><img src="./linkedlist_4.png" alt="linkedlist add"><br>remove方法:<br>remove方法只会移除第一个相等的元素哟！<br><img src="./linkedlist_5.png" alt="linkedlist remove"></p>
-<h3 id="队列操作"><a href="#队列操作" class="headerlink" title="队列操作"></a>队列操作</h3><p>linkedlist提供了基础的队列操作，总结如下:</p>
-<table class="table table-celled table-component" border="1" style="border-collapse: collapse; width: 100%; height: 96px;" id="tinymcetable"> <thead><br><tr style="height: 20px;"><br><th style="width: 12%; height: 20px;">方法</th><br><th style="width: 40%; height: 20px;">相同点</th><br><th style="width: 48%; height: 20px;">不同点</th><br></tr><br></thead><br><tbody><br><tr style="height: 20px;"><br><td style="width: 12%; height: 20px;">peek</td><br><td style="width: 40%; height: 36px; text-align: left;" rowspan="2">查找List的head元素，且不会删除该元素</td><br><td style="width: 48%; height: 20px;">若List为空，则会返回null</td><br></tr><br><tr style="height: 20px;"><br><td style="width: 12%; height: 16px;">element</td><br><td style="width: 48%; height: 16px;">若List不为空，则会抛出NoSuchElementException</td><br></tr><br><tr style="height: 20px;"><br><td style="width: 12%; height: 20px;">poll</td><br><td style="width: 40%; height: 40px; text-align: left;" rowspan="2">查找List的head元素，但会删除该元素</td><br><td style="width: 48%; height: 20px;">若List为空，则会返回null</td><br></tr><br><tr style="height: 20px;"><br><td style="width: 12%; height: 20px;">remove</td><br><td style="width: 48%; height: 20px;">若List不为空，则会抛出NoSuchElementException</td><br></tr><br></tbody> </table><br><table class="table table-celled table-component" border="1" style="border-collapse: collapse; width: 100%;" id="tinymcetable"> <thead><br><tr><br><th>offer</th><br><th>向List tail插入一个新的元素</th><br></tr><br></thead><br><tbody><br><tr><br><td>push</td><br><td>向List head插入一个新的元素</td><br></tr><br><tr><br><td>pop</td><br><td>删除当前List的head 若List为空则返回NoSuchElementException</td><br></tr><br></tbody> </table>
-
-
-
-
+<h3 id="队列操作"><a href="#队列操作" class="headerlink" title="队列操作"></a>队列操作</h3><p>linkedlist提供了基础的队列操作，总结如下:<br><img src="../attachments/linkedlist.table1.html" alt="linkedlist queue操作"><br><img src="../attachments/linkedlist.table2.html" alt="linkedlist queue操作"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
 <ol>
 <li>LinkedList的底层实现是链表</li>
