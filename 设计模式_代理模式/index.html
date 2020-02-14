@@ -19,14 +19,14 @@
   
   <title>代理模式 | Hexo</title>
   <meta name="description" content="什么是代理模式最近在学习spring cloud的一些基础，在看到Feign组件的时候对其实现产生了浓厚的兴趣，在度娘的帮助下，发现其主要使用了代理模式对RestTemplate做了封装，在此，简单回顾一下java中的代理模式。代理模式，顾名思义，就是在调用类和被调用类出现了一个代理类，生活中这种例子有很多，比如买车，买房等等，我们都不是直接去车企，开发商那直接买的，而是通过经销商呀，买房中介呀等">
-<meta name="keywords" content="设计模式">
+<meta name="keywords" content="代理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="代理模式">
 <meta property="og:url" content="https://supertheme.github.io/设计模式_代理模式/index.html">
 <meta property="og:site_name" content="supertheme">
 <meta property="og:description" content="什么是代理模式最近在学习spring cloud的一些基础，在看到Feign组件的时候对其实现产生了浓厚的兴趣，在度娘的帮助下，发现其主要使用了代理模式对RestTemplate做了封装，在此，简单回顾一下java中的代理模式。代理模式，顾名思义，就是在调用类和被调用类出现了一个代理类，生活中这种例子有很多，比如买车，买房等等，我们都不是直接去车企，开发商那直接买的，而是通过经销商呀，买房中介呀等">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-13T03:11:36.905Z">
+<meta property="og:updated_time" content="2020-02-14T14:48:49.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代理模式">
 <meta name="twitter:description" content="什么是代理模式最近在学习spring cloud的一些基础，在看到Feign组件的时候对其实现产生了浓厚的兴趣，在度娘的帮助下，发现其主要使用了代理模式对RestTemplate做了封装，在此，简单回顾一下java中的代理模式。代理模式，顾名思义，就是在调用类和被调用类出现了一个代理类，生活中这种例子有很多，比如买车，买房等等，我们都不是直接去车企，开发商那直接买的，而是通过经销商呀，买房中介呀等">
@@ -208,13 +208,20 @@
 
     
       
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/spring/">spring</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
 
     
       
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/collection/">collection</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/collection/">collection</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/">springboot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thread/">thread</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/代理/">代理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -224,7 +231,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/collection/" style="font-size: 14px;">collection</a> <a href="/tags/设计模式/" style="font-size: 13px;">设计模式</a>
+      <a href="/tags/collection/" style="font-size: 14px;">collection</a> <a href="/tags/springboot/" style="font-size: 13px;">springboot</a> <a href="/tags/thread/" style="font-size: 13px;">thread</a> <a href="/tags/代理/" style="font-size: 13px;">代理</a> <a href="/tags/前端/" style="font-size: 13px;">前端</a>
     </div>
   </div>
 
@@ -249,7 +256,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/设计模式/">设计模式</a>
               </p>
               <p class="item-title">
                 <a href="/设计模式_代理模式/" class="title">代理模式</a>
@@ -264,7 +271,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/java/">java</a>
               </p>
               <p class="item-title">
                 <a href="/Java_Collection_LinkedList/" class="title">LinkedList</a>
@@ -279,10 +286,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/javascript/">javascript</a>
               </p>
               <p class="item-title">
-                <a href="/新文档/" class="title">(no title)</a>
+                <a href="/新文档/" class="title">var 的奇怪作用域</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-03-11T14:42:08.843Z" itemprop="datePublished">2019-03-11</time>
@@ -294,10 +301,10 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/spring/">spring</a>
               </p>
               <p class="item-title">
-                <a href="/springboot/" class="title">(no title)</a>
+                <a href="/springboot/" class="title">Springboot</a>
               </p>
               <p class="item-date">
                 <time datetime="2018-12-30T11:44:05.571Z" itemprop="datePublished">2018-12-30</time>
@@ -309,7 +316,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/java/">java</a>
               </p>
               <p class="item-title">
                 <a href="/Java_Collection_ArrayList/" class="title">ArrayList</a>
@@ -353,10 +360,15 @@
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
+  </span>
+
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/设计模式/">设计模式</a>
+	<a class="article-tag-link" href="/tags/代理/">代理</a>
   </span>
 
 
