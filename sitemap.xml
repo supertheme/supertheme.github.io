@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://supertheme.github.io/book/index.html</loc>
+    
+    <lastmod>2020-02-14T15:12:36.900Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://supertheme.github.io/repository/index.html</loc>
+    
+    <lastmod>2020-02-14T15:12:19.031Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://supertheme.github.io/categories/index.html</loc>
+    
+    <lastmod>2020-02-14T15:10:32.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://supertheme.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-02-14T15:10:07.573Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://supertheme.github.io/%E6%96%B0%E6%96%87%E6%A1%A3/</loc>
     
     <lastmod>2020-02-14T14:49:29.662Z</lastmod>
