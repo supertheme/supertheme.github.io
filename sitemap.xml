@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://supertheme.github.io/books/index.html</loc>
+    
+    <lastmod>2020-02-15T11:18:27.488Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://supertheme.github.io/about/index.html</loc>
     
     <lastmod>2020-02-14T15:14:30.657Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://supertheme.github.io/links/index.html</loc>
     
     <lastmod>2020-02-14T15:14:20.261Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://supertheme.github.io/books/index.html</loc>
-    
-    <lastmod>2020-02-14T15:14:03.092Z</lastmod>
     
   </url>
   
