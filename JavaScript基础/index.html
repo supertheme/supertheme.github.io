@@ -18,18 +18,18 @@
   
   
   <title>JavaScript基础 | Supertheme</title>
-  <meta name="description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存">
+  <meta name="description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存 基本类型的值">
 <meta name="keywords" content="前端 ,JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript基础">
 <meta property="og:url" content="https://supertheme.github.io/JavaScript基础/index.html">
 <meta property="og:site_name" content="supertheme">
-<meta property="og:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存">
+<meta property="og:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存 基本类型的值">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-21T11:31:06.081Z">
+<meta property="og:updated_time" content="2020-03-21T12:17:28.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础">
-<meta name="twitter:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存">
+<meta name="twitter:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存 基本类型的值">
   <!-- Canonical links -->
   <link rel="canonical" href="https://supertheme.github.io/JavaScript基础/index.html">
   
@@ -356,10 +356,20 @@
     <div class="article-entry marked-body" itemprop="articleBody">
       
         <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
-<li>JavaScript 由ECMAScript 、BOM、  DOM三部分组成</li>
-<li>由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object</li>
-<li>ECMAScript中没有函数签名概念，因此没有重载</li>
-<li>ECMAScript中的函数参数实际上都会存放在arguments数组中<h2 id="变量作用域和内存"><a href="#变量作用域和内存" class="headerlink" title="变量作用域和内存"></a>变量作用域和内存</h2></li>
+<li>JavaScript 由<strong>ECMAScript 、BOM、  DOM</strong>三部分组成</li>
+<li>由ECMAScript 数据类型有两种:基本数据类型<strong>Undefined Null Boolean String Number</strong> 以及复杂数据类型<strong>Object</strong></li>
+<li>ECMAScript中没有函数签名概念，因此<strong>没有重载</strong></li>
+<li>ECMAScript中的函数参数实际上都会存放在arguments数组中<h2 id="变量作用域和内存"><a href="#变量作用域和内存" class="headerlink" title="变量作用域和内存"></a>变量作用域和内存</h2><ul>
+<li>基本类型的值占有固定大小的内存，因此被保存在栈内存中。引用类型的值是对象，保存在堆内存中。</li>
+<li>基本类型的复制实际上是将值进行了复制。而引用类型的复制实际上是对于引用(指针)进行了复制，在堆内存中的对象还是同一个。</li>
+<li>EMACScript中的所有参数传递都是按照<strong>值传递</strong></li>
+<li>可使用typeof检测类型，instanceof检测实例类型</li>
+<li>EMACScript<strong>没有块级作用域</strong>，所有作用域由上之下形成作用域链，子作用域可以访问父作用域的，反之不能。根作用域在window对象上。</li>
+<li>JavaScript常用的垃圾回收算法有两个:<strong>标记清除</strong>和<strong>引用计数</strong></li>
+<li>显式的将不使用的变量置为null能帮助回收内存</li>
+<li>避免<strong>循环引用</strong></li>
+</ul>
+</li>
 </ul>
 
       
