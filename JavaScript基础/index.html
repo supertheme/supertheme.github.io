@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="supertheme">
 <meta property="og:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存   基本类型">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-22T04:57:24.736Z">
+<meta property="og:updated_time" content="2020-03-22T10:57:34.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础">
 <meta name="twitter:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存   基本类型">
@@ -390,6 +390,15 @@
 <li>ECMAScript还内置了两个兜底的对象，开发人员不用显式的实例化内置对象就可以使用。他们分时是 <strong>Global</strong> 和 <strong>Math</strong></li>
 <li>Global对象有<strong>encodeURI encodeURLComponent decodeURI decodeURLComponent eval</strong> ,二者的区别在于encodeURI不会对本身属于URI的特殊字符进行编码(例如/,#,:等符号)，而encodeURLComponent会对所有传入的字符进行编码。一般来说，我们使用encodeURLComponent更多。</li>
 <li>我们不能直接访问Global对象,但该角色在JavaScript中由window对象扮演</li>
+</ul>
+<p>##面向对象</p>
+<ul>
+<li>创建对象的方式大致有三种：<strong>工厂模式 构造函数模式 原型模式</strong></li>
+<li>工厂模式创建的对象无法识别对象的类型</li>
+<li>构造函数模式的缺点在于每个方法和属性都要在每个实例上重新创建一遍，造成很多大的内存浪费</li>
+<li>原型模式三叉戟: <strong>构造函数 原型对象 实例 </strong> ，构造函数的protoType指向原型，原型的constructor指向构造函数，实例的[[protoType]]（即<em>proto</em>）指向实例。通过引入原型对象这一概念，将构造函数与实例的关系切开，同时注意使用字面量重写原型会切断实例与原有原型的关系。</li>
+<li>创建自定义类型的最常见方式就是组合使用构造函数模式与原型模式</li>
+<li>ECMAScript对于继承的实现利用的是原型链的概念，即将原型也赋予一个<em>proto</em>属性，其指向其他原型对象，原型链的最顶端是Object的原型。</li>
 </ul>
 
       
