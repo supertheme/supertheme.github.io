@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="supertheme">
 <meta property="og:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存   基本类型">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-22T10:57:34.453Z">
+<meta property="og:updated_time" content="2020-03-23T13:56:22.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础">
 <meta name="twitter:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存   基本类型">
@@ -400,6 +400,7 @@
 <li>创建自定义类型的最常见方式就是组合使用构造函数模式与原型模式</li>
 <li>ECMAScript对于继承的实现利用的是原型链的概念，即将原型也赋予一个<em>proto</em>属性，其指向其他原型对象，原型链的最顶端是Object的原型。</li>
 </ul>
+<p>##函数表达式<br>-注意<strong>函数声明</strong>和<strong>函数表达式</strong>的区别<br>-匿名函数与闭包的区别。闭包是指有权访问另一个函数作用域中变量的函数。创建闭包的常见方式就是在一个函数内部创建另一个函数<br>-当函数返回了一个闭包后，这个函数的作用域将会一直在内存中存在直到闭包不存在位置<br>-闭包的作用域链包含着它自己的作用域，包含函数的作用域以及全局作用域<br>-<strong>(function(){})()</strong> 模范块级作用域，实际上是利用了匿名函数的作用域<br>-过度使用闭包会造成大量的内存占用</p>
 
       
     </div>
