@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="supertheme">
 <meta property="og:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存   基本类型">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-23T13:56:22.699Z">
+<meta property="og:updated_time" content="2020-03-24T14:18:30.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础">
 <meta name="twitter:description" content="基本概念 JavaScript 由ECMAScript 、BOM、  DOM三部分组成 由ECMAScript 数据类型有两种:基本数据类型Undefined Null Boolean String Number 以及复杂数据类型Object ECMAScript中没有函数签名概念，因此没有重载 ECMAScript中的函数参数实际上都会存放在arguments数组中变量作用域和内存   基本类型">
@@ -391,8 +391,7 @@
 <li>Global对象有<strong>encodeURI encodeURLComponent decodeURI decodeURLComponent eval</strong> ,二者的区别在于encodeURI不会对本身属于URI的特殊字符进行编码(例如/,#,:等符号)，而encodeURLComponent会对所有传入的字符进行编码。一般来说，我们使用encodeURLComponent更多。</li>
 <li>我们不能直接访问Global对象,但该角色在JavaScript中由window对象扮演</li>
 </ul>
-<p>##面向对象</p>
-<ul>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><ul>
 <li>创建对象的方式大致有三种：<strong>工厂模式 构造函数模式 原型模式</strong></li>
 <li>工厂模式创建的对象无法识别对象的类型</li>
 <li>构造函数模式的缺点在于每个方法和属性都要在每个实例上重新创建一遍，造成很多大的内存浪费</li>
@@ -400,7 +399,23 @@
 <li>创建自定义类型的最常见方式就是组合使用构造函数模式与原型模式</li>
 <li>ECMAScript对于继承的实现利用的是原型链的概念，即将原型也赋予一个<em>proto</em>属性，其指向其他原型对象，原型链的最顶端是Object的原型。</li>
 </ul>
-<p>##函数表达式<br>-注意<strong>函数声明</strong>和<strong>函数表达式</strong>的区别<br>-匿名函数与闭包的区别。闭包是指有权访问另一个函数作用域中变量的函数。创建闭包的常见方式就是在一个函数内部创建另一个函数<br>-当函数返回了一个闭包后，这个函数的作用域将会一直在内存中存在直到闭包不存在位置<br>-闭包的作用域链包含着它自己的作用域，包含函数的作用域以及全局作用域<br>-<strong>(function(){})()</strong> 模范块级作用域，实际上是利用了匿名函数的作用域<br>-过度使用闭包会造成大量的内存占用</p>
+<h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><p>-注意<strong>函数声明</strong>和<strong>函数表达式</strong>的区别<br>-匿名函数与闭包的区别。闭包是指有权访问另一个函数作用域中变量的函数。创建闭包的常见方式就是在一个函数内部创建另一个函数<br>-当函数返回了一个闭包后，这个函数的作用域将会一直在内存中存在直到闭包不存在位置<br>-闭包的作用域链包含着它自己的作用域，包含函数的作用域以及全局作用域<br>-<strong>(function(){})()</strong> 模范块级作用域，实际上是利用了匿名函数的作用域<br>-过度使用闭包会造成大量的内存占用</p>
+<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><ul>
+<li>BOM的核心对象<strong>Window</strong>,其充当了Global对象的角色，setTimeOut setInterval alert comfirm prompt均是其常见方法。每个Frame拥有自己的Window对象</li>
+<li><strong>location</strong>对象</li>
+<li><strong>navigator</strong>对象</li>
+<li><strong>screen</strong>对象</li>
+<li><strong>history</strong>对象</li>
+</ul>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><ul>
+<li>DOM由各种节点构成。</li>
+<li>最基本的节点类型是Node,用于抽象的表示文档中一个独立的部分；所有其他类型都继承自Node</li>
+<li>Document类型表示整个文档，是一组分层节点的根节点。在JavaScript中，document对象时Document的一个实例。</li>
+<li>Element节点表示文档中所有的HTML或XML元素，可以用来操作这些元素的内容和特性</li>
+<li>还有一些节点类型，分别表示文本内容 注释 文档类型 CDATA区域以及文档片段</li>
+<li>DOM操作很直观，但是在处理script和style上仍然存在复杂性</li>
+<li>DOM操作很消耗性能，尽量减少DOM操作</li>
+</ul>
 
       
     </div>
