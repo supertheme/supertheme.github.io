@@ -17,29 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>ArrayList | Supertheme</title>
-  <meta name="description" content="ArrayList简介 ArrayList源码分析 ArrayList扩容机制   ArrayList简介  ArrayList可以理解成一个”动态数组”，由于Java中数组都是固定大小的，但ArrayList是一个可以动态的添加和删除元素的List,其底层仍然是由数组实现的。ArrayList继承自AbstractList，并且实现了List,RandomAccess,Cloneable,S">
-<meta name="keywords" content="collection">
+  <title>mysql事务 | Supertheme</title>
+  <meta name="description" content="客户端 服务端  2.1 连接器  2.2 分析器  2.3 优化器  2.4 执行器  存储引擎  3.1 InnoDB （支持事务） 聚簇引擎（数据文件和索引文件在一起） 3.2 MyISAM （不支持事务） 非聚簇引擎 （数据文件和索引文件不在一起）   事务的特点1. 原子性（底层实现：Undo log） 2. 一致性   3. 隔离性（底层实现：锁） 4. 持久性（底层实现：Redo">
+<meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ArrayList">
-<meta property="og:url" content="https://supertheme.github.io/Java_Collection_ArrayList/index.html">
+<meta property="og:title" content="mysql事务">
+<meta property="og:url" content="https://supertheme.github.io/mysql事务/index.html">
 <meta property="og:site_name" content="supertheme">
-<meta property="og:description" content="ArrayList简介 ArrayList源码分析 ArrayList扩容机制   ArrayList简介  ArrayList可以理解成一个”动态数组”，由于Java中数组都是固定大小的，但ArrayList是一个可以动态的添加和删除元素的List,其底层仍然是由数组实现的。ArrayList继承自AbstractList，并且实现了List,RandomAccess,Cloneable,S">
+<meta property="og:description" content="客户端 服务端  2.1 连接器  2.2 分析器  2.3 优化器  2.4 执行器  存储引擎  3.1 InnoDB （支持事务） 聚簇引擎（数据文件和索引文件在一起） 3.2 MyISAM （不支持事务） 非聚簇引擎 （数据文件和索引文件不在一起）   事务的特点1. 原子性（底层实现：Undo log） 2. 一致性   3. 隔离性（底层实现：锁） 4. 持久性（底层实现：Redo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://supertheme.github.io/images/arraylist_1.png">
-<meta property="og:image" content="https://supertheme.github.io/images/arraylist_2.png">
-<meta property="og:image" content="https://supertheme.github.io/images/arraylist_3.png">
-<meta property="og:image" content="https://supertheme.github.io/images/arraylist_4.png">
-<meta property="og:image" content="https://supertheme.github.io/images/arraylist_5.png">
-<meta property="og:image" content="https://supertheme.github.io/images/arraylist_6.png">
-<meta property="og:image" content="https://supertheme.github.io/images/arraylist_7.png">
-<meta property="og:updated_time" content="2020-02-14T14:45:58.591Z">
+<meta property="og:updated_time" content="2020-04-18T09:28:52.025Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ArrayList">
-<meta name="twitter:description" content="ArrayList简介 ArrayList源码分析 ArrayList扩容机制   ArrayList简介  ArrayList可以理解成一个”动态数组”，由于Java中数组都是固定大小的，但ArrayList是一个可以动态的添加和删除元素的List,其底层仍然是由数组实现的。ArrayList继承自AbstractList，并且实现了List,RandomAccess,Cloneable,S">
-<meta name="twitter:image" content="https://supertheme.github.io/images/arraylist_1.png">
+<meta name="twitter:title" content="mysql事务">
+<meta name="twitter:description" content="客户端 服务端  2.1 连接器  2.2 分析器  2.3 优化器  2.4 执行器  存储引擎  3.1 InnoDB （支持事务） 聚簇引擎（数据文件和索引文件在一起） 3.2 MyISAM （不支持事务） 非聚簇引擎 （数据文件和索引文件不在一起）   事务的特点1. 原子性（底层实现：Undo log） 2. 一致性   3. 隔离性（底层实现：锁） 4. 持久性（底层实现：Redo">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://supertheme.github.io/Java_Collection_ArrayList/index.html">
+  <link rel="canonical" href="https://supertheme.github.io/mysql事务/index.html">
   
     <link rel="alternate" href="/atom.xml" title="supertheme" type="application/atom+xml">
   
@@ -328,14 +320,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Java_Collection_ArrayList" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-mysql事务" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      ArrayList
+      mysql事务
     </h1>
   
 
@@ -343,67 +335,70 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/Java_Collection_ArrayList/" class="article-date">
-	  <time datetime="2018-12-16T10:41:27.250Z" itemprop="datePublished">2018-12-16</time>
+	<a href="/mysql事务/" class="article-date">
+	  <time datetime="2020-04-17T14:12:23.000Z" itemprop="datePublished">2020-04-17</time>
 	</a>
 </span>
         
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/java/">java</a>
-  </span>
-
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/collection/">collection</a>
+	<a class="article-tag-link" href="/tags/mysql/">mysql</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/Java_Collection_ArrayList/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/mysql事务/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <blockquote>
-<ul>
-<li>ArrayList简介</li>
-<li>ArrayList源码分析</li>
-<li>ArrayList扩容机制</li>
-</ul>
-</blockquote>
-<h2 id="ArrayList简介"><a href="#ArrayList简介" class="headerlink" title="ArrayList简介"></a>ArrayList简介</h2><hr>
-<ol>
-<li>ArrayList可以理解成一个”动态数组”，由于Java中数组都是固定大小的，但ArrayList是一个可以动态的添加和删除元素的List,其底层仍然是由数组实现的。ArrayList继承自AbstractList，并且实现了List,RandomAccess,Cloneable,Serializable这四个接口。</li>
-<li>ArrayList与Vector有很大的相似性，最大的区别在于ArrayList是线程不安全的，而Vector是线程安全的，若要使用线程安全的，请使用<code>List list = Collections.synchronizedList(new ArrayList(...));</code></li>
-<li>ArrayList与LinkedList同样也有很大的相似性，二者作为List的主要两个实现类，主要区别在于ArrayList的add/remove操作慢，而get操作快，而LinkedList则恰好相反，究其原因还是在于底层实现一个是数组，一个是链表<h2 id="ArrayList源码分析"><a href="#ArrayList源码分析" class="headerlink" title="ArrayList源码分析"></a>ArrayList源码分析</h2></li>
+        <ol>
+<li>客户端</li>
+<li><p>服务端</p>
+<p> 2.1 连接器</p>
+<p> 2.2 分析器</p>
+<p> 2.3 优化器</p>
+<p> 2.4 执行器</p>
+</li>
+<li><p>存储引擎</p>
+<p> 3.1 InnoDB （支持事务）<br> 聚簇引擎（数据文件和索引文件在一起）<br> 3.2 MyISAM （不支持事务）<br> 非聚簇引擎 （数据文件和索引文件不在一起）</p>
+</li>
 </ol>
-<hr>
-<h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><p>ArrayList内部持有Object[]来作为存储容器，其默认的CAPACITY大小为10，最大的容量为Integer.MAX_VALUE<br><img src="../images/arraylist_1.png" alt="ArrayList的成员变量"></p>
-<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>ArrayList为我们提供了3种构造方法，分别是：</p>
-<ol>
-<li>指定初始容量的构造方法</li>
-<li>无参构造方法</li>
-<li>使用特定集合的构造方法</li>
-</ol>
-<p>第一种为elementData初始化成对应的指定容量大小，第二种直接构造一个空的elementData，第三种则是通过<code>Arrays.copyof</code>来初始话elementData并赋值<br><img src="../images/arraylist_2.png" alt="ArrayList构造方法"></p>
-<h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><p>由于ArrayList本身的底层实现是数组，所以对于其操作的add remove get  set 等方法全部都是基于数据元素的操作，从源码截取了几个方法，本身逻辑均不复杂<br><img src="../images/arraylist_3.png" alt="ArrayList中的add、set"></p>
-<p>remove方法:<br><img src="../images/arraylist_4.png" alt="ArrayList中的remove"></p>
-<h3 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h3><p>ArrayList还内置了三个内部类来帮助我们完成一些其他的操作，其中包含实现了Iterator接口的Itr，实现了ListIterator接口的ListItr，还有一个SubList</p>
-<h4 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h4><p>由于Itr和ListItr只是实现的接口略有差异，在此截取了Itr执行remove的代码片段，我们可以看到，在Itr内部中含有一个新的expectedModCount变量，其初始值为modCount，<br>在执行remove操作的时候，会先进行判断expectedModCount与modCount是否相等，若相等，则执行remove操作，若不相等，则会抛出ConcurrentModificationException异常，相信小伙伴们对这个异常并不陌生，<br>平时在代码中对List写foreach循环的时候，若执行了remove操作，则就会遇见该异常了，而如果使用Iterator去执行remove操作，就可以正常删除了。原因就在于此哈。<br><img src="../images/arraylist_5.png" alt="ArrayList中的Iterator"></p>
-<h4 id="SubList"><a href="#SubList" class="headerlink" title="SubList"></a>SubList</h4><p>ArrayList提供了SubList的内部类，其主要作用是提供对于List子集合的一个视图，我们需要注意的是，这仅仅是一个视图（与数据库里的概念类似）,任何对原List的操作均会体现在SubList上，而任何在SubList上的操作也会同样<br>的反应到List上，因为其本质上都是对同一个elementData做操作，因此，我们在进行add、remove等structurally modified的操作时，一定要特别注意subList也会进行相应的变化<br><img src="../images/arraylist_6.png" alt="ArrayList中的SubList"></p>
-<h2 id="ArrayList扩容机制"><a href="#ArrayList扩容机制" class="headerlink" title="ArrayList扩容机制"></a>ArrayList扩容机制</h2><hr>
-<p>为了充分的利用内存空间，代码规范也会让我们在初始化ArrayList就为其指定capacity，因此，我们有必要也了解一下ArrayList中的扩容机制，在执行add，addAll等操作时，会进行capacity的check，与当前elementData的size进行对比，<br>若需要扩容，则会<code>newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1)</code>，新容量将会是旧容量的1.5倍<br><img src="../images/arraylist_7.png" alt="ArrayList中的扩容"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
-<ol>
-<li>ArrayList的底层实现是数组</li>
-<li>ArrayList是非线程安全的</li>
-<li>ArrayList最好在初始化时就为其指定容量大小，每次在做add操作时，会触发容量检查，若当前数组小于元素个数时，会新申请1.5倍的数组空间，将原有数组复制</li>
-<li>ArrayList遵循 fail-fast 机制，在执行add remove 等结构性修改的操作时，会抛出异常，若要在遍历过程中添加或修改元素，可以使用迭代器</li>
-<li>ArrayList提供的subList方法实际上是返回的是其一个内部类，底层仍然指向同一片数组空间，只是作为视图使用，无论对List本身操作或者对SubList操作，二者相互之间均彼此影响</li>
+<h2 id="事务的特点"><a href="#事务的特点" class="headerlink" title="事务的特点"></a>事务的特点</h2><pre><code>1. 原子性（底层实现：Undo log）
+2. 一致性  
+3. 隔离性（底层实现：锁）
+4. 持久性（底层实现：Redo log）
+</code></pre><h2 id="原子性实现原理-Undo-log"><a href="#原子性实现原理-Undo-log" class="headerlink" title="原子性实现原理 Undo log"></a>原子性实现原理 Undo log</h2><pre><code>Undo Log是为了实现事务的原子性，在MySQL数据库InnoDB存储引擎中，还用Undo log来实现多版本并发控制（简称 MVCC）
+
+在操作任何数据之前，首先将数据备份至一个地方（这个存储数据备份的地方被称为Undo log）,然后进行数据的修改，如果出现了错误或者用户执行了Rollback，系统可以利用Undo log中的备份将数据恢复到事务开始之前的状态。
+
+简而言之，Undo log是逻辑日志(优先在内存中记录，当内存中不够时才会在磁盘中记录)，可以理解为：
+当delete一条记录，undo log会记录一条对应的Insert记录
+当insert一条记录，undo log会记录一条对应的delete记录
+当update一条记录，undo log会记录一条对应的相反update记录
+</code></pre><h2 id="持久性实现原理-Redo-log"><a href="#持久性实现原理-Redo-log" class="headerlink" title="持久性实现原理 Redo log"></a>持久性实现原理 Redo log</h2><pre><code>和Undo log相反，Redo log记录的是新数据的备份。在事务提交前，只要将Redo log持久化即可，不需要将数据持久化。当系统崩溃时，虽然数据没有持久化，但是Redo log已经持久化。系统可以根据Redo log的内容，将所有数据恢复至最新的状态。
+</code></pre><h2 id="隔离性实现原理-锁"><a href="#隔离性实现原理-锁" class="headerlink" title="隔离性实现原理 锁"></a>隔离性实现原理 锁</h2><pre><code>基于锁的并发控制流程
+可能出现的问题：死锁
+除了锁可以实现并发控制之外，还有的策略包含：
+1 基于时间戳
+2 基于快照隔离
+3 基于有效性检查
+</code></pre><p>###MySQL的隔离级别###</p>
+<pre><code>事务具有隔离性，理论上事务之间的执行不会产生相互影响
+然而完全的隔离性会导致系统并发性能很低，降低对资源的利用率，因此实际上对隔离性的要求会有所放宽，这也会一定程度造成对数据库一致性的要求降低
+</code></pre><ol>
+<li><strong>读未提交 read uncommited</strong><br> 脏读 不可重复读 幻读</li>
+<li><strong>读已提交 read commited （oracle默认隔离级别）</strong><br> 不可重复读 幻读</li>
+<li><strong>可重复读 repeatable read （Mysql默认隔离级别）</strong><br> 幻读</li>
+<li><p><strong>串行化 serializable</strong></p>
+</li>
+<li><p>脏读<br> 两个事务，事务1更改数据但未提交，事务2读取到了该部分数据。即事务2读取到了事务1未提交的数据，此为脏读。</p>
+</li>
+<li>不可重复读<br> 两个事务，事务2先进行了一次读，然后事务1进行了更新操作且提交了事务，此时事物2再进行一次读，会发现两次读的结果是不一致的，此为不可重复读。</li>
+<li>幻读<br> 两个事务，事务1进行了Insert或者delete操作，然后提交了，事务2在查询时是查不到事务1里修改的数据的，此为幻读<h2 id="一致性的实现原理-原子性-隔离性-一致性"><a href="#一致性的实现原理-原子性-隔离性-一致性" class="headerlink" title="一致性的实现原理 原子性+隔离性+一致性"></a>一致性的实现原理 原子性+隔离性+一致性</h2></li>
 </ol>
 
       
@@ -414,7 +409,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://supertheme.github.io/Java_Collection_ArrayList/" title="ArrayList" target="_blank" rel="external">https://supertheme.github.io/Java_Collection_ArrayList/</a>
+      <a href="https://supertheme.github.io/mysql事务/" title="mysql事务" target="_blank" rel="external">https://supertheme.github.io/mysql事务/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -461,12 +456,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/springboot/" title="Springboot"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/mysql锁/" title="mysql锁"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/Java_ThreadLocal/" title="ThreadLocal"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/redis/" title="redis"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

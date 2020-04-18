@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://supertheme.github.io/"/>
-  <updated>2020-04-11T14:40:33.660Z</updated>
+  <updated>2020-04-18T09:37:58.904Z</updated>
   <id>https://supertheme.github.io/</id>
   
   <author>
@@ -15,6 +15,103 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql索引</title>
+    <link href="https://supertheme.github.io/mysql%E7%B4%A2%E5%BC%95/"/>
+    <id>https://supertheme.github.io/mysql%E7%B4%A2%E5%BC%95/</id>
+    <published>2020-04-18T09:37:58.000Z</published>
+    <updated>2020-04-18T09:37:58.904Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mysql锁</title>
+    <link href="https://supertheme.github.io/mysql%E9%94%81/"/>
+    <id>https://supertheme.github.io/mysql%E9%94%81/</id>
+    <published>2020-04-17T14:13:06.000Z</published>
+    <updated>2020-04-18T07:52:06.722Z</updated>
+    
+    <content type="html"><![CDATA[<p>InnoDB</p><ol><li>共享锁</li><li>排他锁</li></ol><p>MyISAM</p><ol><li>共享锁</li><li>独占锁</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;InnoDB&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;共享锁&lt;/li&gt;
+&lt;li&gt;排他锁&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;MyISAM&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;共享锁&lt;/li&gt;
+&lt;li&gt;独占锁&lt;/li&gt;
+&lt;/ol&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mysql" scheme="https://supertheme.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql事务</title>
+    <link href="https://supertheme.github.io/mysql%E4%BA%8B%E5%8A%A1/"/>
+    <id>https://supertheme.github.io/mysql%E4%BA%8B%E5%8A%A1/</id>
+    <published>2020-04-17T14:12:23.000Z</published>
+    <updated>2020-04-18T09:28:52.025Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>客户端</li><li><p>服务端</p><p> 2.1 连接器</p><p> 2.2 分析器</p><p> 2.3 优化器</p><p> 2.4 执行器</p></li><li><p>存储引擎</p><p> 3.1 InnoDB （支持事务）<br> 聚簇引擎（数据文件和索引文件在一起）<br> 3.2 MyISAM （不支持事务）<br> 非聚簇引擎 （数据文件和索引文件不在一起）</p></li></ol><h2 id="事务的特点"><a href="#事务的特点" class="headerlink" title="事务的特点"></a>事务的特点</h2><pre><code>1. 原子性（底层实现：Undo log）2. 一致性  3. 隔离性（底层实现：锁）4. 持久性（底层实现：Redo log）</code></pre><h2 id="原子性实现原理-Undo-log"><a href="#原子性实现原理-Undo-log" class="headerlink" title="原子性实现原理 Undo log"></a>原子性实现原理 Undo log</h2><pre><code>Undo Log是为了实现事务的原子性，在MySQL数据库InnoDB存储引擎中，还用Undo log来实现多版本并发控制（简称 MVCC）在操作任何数据之前，首先将数据备份至一个地方（这个存储数据备份的地方被称为Undo log）,然后进行数据的修改，如果出现了错误或者用户执行了Rollback，系统可以利用Undo log中的备份将数据恢复到事务开始之前的状态。简而言之，Undo log是逻辑日志(优先在内存中记录，当内存中不够时才会在磁盘中记录)，可以理解为：当delete一条记录，undo log会记录一条对应的Insert记录当insert一条记录，undo log会记录一条对应的delete记录当update一条记录，undo log会记录一条对应的相反update记录</code></pre><h2 id="持久性实现原理-Redo-log"><a href="#持久性实现原理-Redo-log" class="headerlink" title="持久性实现原理 Redo log"></a>持久性实现原理 Redo log</h2><pre><code>和Undo log相反，Redo log记录的是新数据的备份。在事务提交前，只要将Redo log持久化即可，不需要将数据持久化。当系统崩溃时，虽然数据没有持久化，但是Redo log已经持久化。系统可以根据Redo log的内容，将所有数据恢复至最新的状态。</code></pre><h2 id="隔离性实现原理-锁"><a href="#隔离性实现原理-锁" class="headerlink" title="隔离性实现原理 锁"></a>隔离性实现原理 锁</h2><pre><code>基于锁的并发控制流程可能出现的问题：死锁除了锁可以实现并发控制之外，还有的策略包含：1 基于时间戳2 基于快照隔离3 基于有效性检查</code></pre><p>###MySQL的隔离级别###</p><pre><code>事务具有隔离性，理论上事务之间的执行不会产生相互影响然而完全的隔离性会导致系统并发性能很低，降低对资源的利用率，因此实际上对隔离性的要求会有所放宽，这也会一定程度造成对数据库一致性的要求降低</code></pre><ol><li><strong>读未提交 read uncommited</strong><br> 脏读 不可重复读 幻读</li><li><strong>读已提交 read commited （oracle默认隔离级别）</strong><br> 不可重复读 幻读</li><li><strong>可重复读 repeatable read （Mysql默认隔离级别）</strong><br> 幻读</li><li><p><strong>串行化 serializable</strong></p></li><li><p>脏读<br> 两个事务，事务1更改数据但未提交，事务2读取到了该部分数据。即事务2读取到了事务1未提交的数据，此为脏读。</p></li><li>不可重复读<br> 两个事务，事务2先进行了一次读，然后事务1进行了更新操作且提交了事务，此时事物2再进行一次读，会发现两次读的结果是不一致的，此为不可重复读。</li><li>幻读<br> 两个事务，事务1进行了Insert或者delete操作，然后提交了，事务2在查询时是查不到事务1里修改的数据的，此为幻读<h2 id="一致性的实现原理-原子性-隔离性-一致性"><a href="#一致性的实现原理-原子性-隔离性-一致性" class="headerlink" title="一致性的实现原理 原子性+隔离性+一致性"></a>一致性的实现原理 原子性+隔离性+一致性</h2></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;客户端&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;服务端&lt;/p&gt;
+&lt;p&gt; 2.1 连接器&lt;/p&gt;
+&lt;p&gt; 2.2 分析器&lt;/p&gt;
+&lt;p&gt; 2.3 优化器&lt;/p&gt;
+&lt;p&gt; 2.4 执行器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;存储引擎&lt;/p&gt;
+&lt;p&gt; 3.1 InnoDB （支持事务）
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mysql" scheme="https://supertheme.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis</title>
+    <link href="https://supertheme.github.io/redis/"/>
+    <id>https://supertheme.github.io/redis/</id>
+    <published>2020-04-14T13:27:44.000Z</published>
+    <updated>2020-04-14T13:27:44.636Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>RPC</title>
