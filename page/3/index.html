@@ -17,21 +17,16 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>var 的奇怪作用域 | Supertheme</title>
-  <meta name="description" content="var 的奇怪作用域function f(shouldInitialize: boolean) {if (shouldInitialize) {var x = 10;} return x;} f(true);  // returns ‘10’f(false); // returns ‘undefined’">
-<meta name="keywords" content="前端">
-<meta property="og:type" content="article">
-<meta property="og:title" content="var 的奇怪作用域">
-<meta property="og:url" content="https://supertheme.github.io/新文档/index.html">
+  <title>Supertheme</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="supertheme">
+<meta property="og:url" content="https://supertheme.github.io/page/3/index.html">
 <meta property="og:site_name" content="supertheme">
-<meta property="og:description" content="var 的奇怪作用域function f(shouldInitialize: boolean) {if (shouldInitialize) {var x = 10;} return x;} f(true);  // returns ‘10’f(false); // returns ‘undefined’">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-14T14:49:29.662Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="var 的奇怪作用域">
-<meta name="twitter:description" content="var 的奇怪作用域function f(shouldInitialize: boolean) {if (shouldInitialize) {var x = 10;} return x;} f(true);  // returns ‘10’f(false); // returns ‘undefined’">
+<meta name="twitter:title" content="supertheme">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://supertheme.github.io/新文档/index.html">
+  <link rel="canonical" href="https://supertheme.github.io/page/3/index.html">
   
     <link rel="alternate" href="/atom.xml" title="supertheme" type="application/atom+xml">
   
@@ -317,17 +312,18 @@
 </aside>
 
   
+  <main class="main" role="main">
   
-<main class="main" role="main">
-  <div class="content">
-  <article id="post-新文档" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  
+    <div class="content">
+  <article id="post-Java_ThreadLocal" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
-    <h1 class="article-title" itemprop="name">
-      var 的奇怪作用域
+    <h1 itemprop="name">
+      <a class="article-title" href="/Java_ThreadLocal/">ThreadLocal</a>
     </h1>
   
 
@@ -335,34 +331,40 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/新文档/" class="article-date">
-	  <time datetime="2019-03-11T14:42:08.843Z" itemprop="datePublished">2019-03-11</time>
+	<a href="/Java_ThreadLocal/" class="article-date">
+	  <time datetime="2018-12-01T13:01:18.695Z" itemprop="datePublished">2018-12-01</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+    <a class="article-category-link" href="/categories/java/">java</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/前端/">前端</a>
+	<a class="article-tag-link" href="/tags/thread/">thread</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/新文档/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/Java_ThreadLocal/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h3 id="var-的奇怪作用域"><a href="#var-的奇怪作用域" class="headerlink" title="var 的奇怪作用域"></a>var 的奇怪作用域</h3><p>function f(shouldInitialize: boolean) {<br>if (shouldInitialize) {<br>var x = 10;<br>}</p>
-<p>return x;<br>}</p>
-<p>f(true);  // returns ‘10’<br>f(false); // returns ‘undefined’</p>
+        <h1 id="ThreadLocal"><a href="#ThreadLocal" class="headerlink" title="ThreadLocal"></a>ThreadLocal</h1><hr>
+<ol>
+<li>ThreadLocal的初步认识</li>
+<li>深入源码解析ThreadLocal</li>
+<li>ThreadLocal的具体使用场景</li>
+<li>总结</li>
+</ol>
+<hr>
+<p>ThreadLocal,顾名思义是线程本地变量，刚开始使用时总会不理解这个local的含义所在，所以我们先看一个例子，在没有使用ThreadLocal的时候是怎样的。</p>
 
       
     </div>
@@ -372,7 +374,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://supertheme.github.io/新文档/" title="var 的奇怪作用域" target="_blank" rel="external">https://supertheme.github.io/新文档/</a>
+      <a href="https://supertheme.github.io/Java_ThreadLocal/" title="ThreadLocal" target="_blank" rel="external">https://supertheme.github.io/Java_ThreadLocal/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -402,46 +404,37 @@
     </div>
   </article>
   
-    
-  <section id="comments">
-  	
-      <div id="vcomments"></div>
-    
-  </section>
-
-
-  
 </div>
 
-  <nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
-  
-  <ul class="pager pull-left">
-    
-    <li class="prev">
-      <a href="/Java_Collection_LinkedList/" title="LinkedList"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/springboot/" title="Springboot"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
-    
-    
-  </ul>
-  
-  
-  
-  <div class="bar-right">
-    
-    <div class="share-component" data-sites="weibo,qq,wechat" data-mobile-sites="weibo,qq,qzone"></div>
-    
-  </div>
-  </div>
-</nav>
   
 
-
+  
+    
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+        <ul class="pager pull-left">
+            
+            <li class="prev">
+                <a href="/page/2/">
+                    <i class="icon icon-angle-left"></i>
+                    上一页
+                </a>
+            </li>
+            
+            
+            <li class="next disabled">
+                <a href="javascript:;">
+                    下一页
+                    <i class="icon icon-angle-right"></i>                    
+                </a>
+            </li>
+            
+        </ul>
+        <div class="total-article bar-right">Page 3 of 3</div>
+        </div>
+    </nav>
+    
+ 
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -494,33 +487,6 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
    
 
 
-
-
-   
-    
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine"></script>
-  <script type="text/javascript">
-  var GUEST = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link';
-  meta = meta.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#vcomments',
-    verify: false,
-    notify: false,
-    appId: '',
-    appKey: '',
-    placeholder: 'Just go go',
-    avatar: 'mm',
-    meta: meta,
-    pageSize: '10' || 10,
-    visitor: false
-  });
-  </script>
-
-     
 
 
 
