@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://supertheme.github.io/"/>
-  <updated>2020-07-14T12:18:44.095Z</updated>
+  <updated>2020-07-14T15:11:12.325Z</updated>
   <id>https://supertheme.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java基础—String</title>
+    <link href="https://supertheme.github.io/Java%E5%9F%BA%E7%A1%80%E2%80%94String/"/>
+    <id>https://supertheme.github.io/Java%E5%9F%BA%E7%A1%80%E2%80%94String/</id>
+    <published>2020-07-14T13:05:37.000Z</published>
+    <updated>2020-07-14T15:11:12.325Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>​        </p><h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><h2 id="不可变性"><a href="#不可变性" class="headerlink" title="不可变性"></a>不可变性</h2><h2 id="hashCode算法"><a href="#hashCode算法" class="headerlink" title="hashCode算法"></a>hashCode算法</h2><h2 id="常见面试题"><a href="#常见面试题" class="headerlink" title="常见面试题"></a>常见面试题</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;String&quot;&gt;&lt;a href=&quot;#String&quot; class=&quot;headerlink&quot; title=&quot;String&quot;&gt;&lt;/a&gt;String&lt;/h1&gt;&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://supertheme.github.io/categories/java/"/>
+    
+    
+      <category term="java基础" scheme="https://supertheme.github.io/tags/java%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>读书思维导图——大型网站技术架构</title>
@@ -438,39 +464,6 @@
     
     
       <category term="springboot" scheme="https://supertheme.github.io/tags/springboot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ArrayList</title>
-    <link href="https://supertheme.github.io/Java_Collection_ArrayList/"/>
-    <id>https://supertheme.github.io/Java_Collection_ArrayList/</id>
-    <published>2018-12-16T10:41:27.250Z</published>
-    <updated>2020-02-14T14:45:58.591Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><ul><li>ArrayList简介</li><li>ArrayList源码分析</li><li>ArrayList扩容机制</li></ul></blockquote><h2 id="ArrayList简介"><a href="#ArrayList简介" class="headerlink" title="ArrayList简介"></a>ArrayList简介</h2><hr><ol><li>ArrayList可以理解成一个”动态数组”，由于Java中数组都是固定大小的，但ArrayList是一个可以动态的添加和删除元素的List,其底层仍然是由数组实现的。ArrayList继承自AbstractList，并且实现了List,RandomAccess,Cloneable,Serializable这四个接口。</li><li>ArrayList与Vector有很大的相似性，最大的区别在于ArrayList是线程不安全的，而Vector是线程安全的，若要使用线程安全的，请使用<code>List list = Collections.synchronizedList(new ArrayList(...));</code></li><li>ArrayList与LinkedList同样也有很大的相似性，二者作为List的主要两个实现类，主要区别在于ArrayList的add/remove操作慢，而get操作快，而LinkedList则恰好相反，究其原因还是在于底层实现一个是数组，一个是链表<h2 id="ArrayList源码分析"><a href="#ArrayList源码分析" class="headerlink" title="ArrayList源码分析"></a>ArrayList源码分析</h2></li></ol><hr><h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><p>ArrayList内部持有Object[]来作为存储容器，其默认的CAPACITY大小为10，最大的容量为Integer.MAX_VALUE<br><img src="../images/arraylist_1.png" alt="ArrayList的成员变量"></p><h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>ArrayList为我们提供了3种构造方法，分别是：</p><ol><li>指定初始容量的构造方法</li><li>无参构造方法</li><li>使用特定集合的构造方法</li></ol><p>第一种为elementData初始化成对应的指定容量大小，第二种直接构造一个空的elementData，第三种则是通过<code>Arrays.copyof</code>来初始话elementData并赋值<br><img src="../images/arraylist_2.png" alt="ArrayList构造方法"></p><h3 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h3><p>由于ArrayList本身的底层实现是数组，所以对于其操作的add remove get  set 等方法全部都是基于数据元素的操作，从源码截取了几个方法，本身逻辑均不复杂<br><img src="../images/arraylist_3.png" alt="ArrayList中的add、set"></p><p>remove方法:<br><img src="../images/arraylist_4.png" alt="ArrayList中的remove"></p><h3 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h3><p>ArrayList还内置了三个内部类来帮助我们完成一些其他的操作，其中包含实现了Iterator接口的Itr，实现了ListIterator接口的ListItr，还有一个SubList</p><h4 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h4><p>由于Itr和ListItr只是实现的接口略有差异，在此截取了Itr执行remove的代码片段，我们可以看到，在Itr内部中含有一个新的expectedModCount变量，其初始值为modCount，<br>在执行remove操作的时候，会先进行判断expectedModCount与modCount是否相等，若相等，则执行remove操作，若不相等，则会抛出ConcurrentModificationException异常，相信小伙伴们对这个异常并不陌生，<br>平时在代码中对List写foreach循环的时候，若执行了remove操作，则就会遇见该异常了，而如果使用Iterator去执行remove操作，就可以正常删除了。原因就在于此哈。<br><img src="../images/arraylist_5.png" alt="ArrayList中的Iterator"></p><h4 id="SubList"><a href="#SubList" class="headerlink" title="SubList"></a>SubList</h4><p>ArrayList提供了SubList的内部类，其主要作用是提供对于List子集合的一个视图，我们需要注意的是，这仅仅是一个视图（与数据库里的概念类似）,任何对原List的操作均会体现在SubList上，而任何在SubList上的操作也会同样<br>的反应到List上，因为其本质上都是对同一个elementData做操作，因此，我们在进行add、remove等structurally modified的操作时，一定要特别注意subList也会进行相应的变化<br><img src="../images/arraylist_6.png" alt="ArrayList中的SubList"></p><h2 id="ArrayList扩容机制"><a href="#ArrayList扩容机制" class="headerlink" title="ArrayList扩容机制"></a>ArrayList扩容机制</h2><hr><p>为了充分的利用内存空间，代码规范也会让我们在初始化ArrayList就为其指定capacity，因此，我们有必要也了解一下ArrayList中的扩容机制，在执行add，addAll等操作时，会进行capacity的check，与当前elementData的size进行对比，<br>若需要扩容，则会<code>newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1)</code>，新容量将会是旧容量的1.5倍<br><img src="../images/arraylist_7.png" alt="ArrayList中的扩容"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr><ol><li>ArrayList的底层实现是数组</li><li>ArrayList是非线程安全的</li><li>ArrayList最好在初始化时就为其指定容量大小，每次在做add操作时，会触发容量检查，若当前数组小于元素个数时，会新申请1.5倍的数组空间，将原有数组复制</li><li>ArrayList遵循 fail-fast 机制，在执行add remove 等结构性修改的操作时，会抛出异常，若要在遍历过程中添加或修改元素，可以使用迭代器</li><li>ArrayList提供的subList方法实际上是返回的是其一个内部类，底层仍然指向同一片数组空间，只是作为视图使用，无论对List本身操作或者对SubList操作，二者相互之间均彼此影响</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;ArrayList简介&lt;/li&gt;
-&lt;li&gt;ArrayList源码分析&lt;/li&gt;
-&lt;li&gt;ArrayList扩容机制&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;ArrayList简介&quot;&gt;&lt;a href=&quot;#Arra
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="https://supertheme.github.io/categories/java/"/>
-    
-    
-      <category term="collection" scheme="https://supertheme.github.io/tags/collection/"/>
     
   </entry>
   
