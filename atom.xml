@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://supertheme.github.io/"/>
-  <updated>2020-07-14T15:11:12.325Z</updated>
+  <updated>2020-07-15T02:48:00.834Z</updated>
   <id>https://supertheme.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://supertheme.github.io/Java%E5%9F%BA%E7%A1%80%E2%80%94String/"/>
     <id>https://supertheme.github.io/Java%E5%9F%BA%E7%A1%80%E2%80%94String/</id>
     <published>2020-07-14T13:05:37.000Z</published>
-    <updated>2020-07-14T15:11:12.325Z</updated>
+    <updated>2020-07-15T02:48:00.834Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>​        </p><h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><h2 id="不可变性"><a href="#不可变性" class="headerlink" title="不可变性"></a>不可变性</h2><h2 id="hashCode算法"><a href="#hashCode算法" class="headerlink" title="hashCode算法"></a>hashCode算法</h2><h2 id="常见面试题"><a href="#常见面试题" class="headerlink" title="常见面试题"></a>常见面试题</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>​        String类位于java.lang包下，该类表示字符串，是java中比较核心的基础类之一，提供了对于字符串的拼接，截取，反转等操作。其底层使用的是一个char[]数组用来存储字符串的值。</p><p><img src="..\images\string_1.png" alt=""></p><h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><ul><li><p><strong>concat</strong></p></li><li><p><strong>contains</strong></p></li><li><p><strong>startsWith/endsWith</strong></p></li><li><p><strong>substring</strong></p></li><li><p><strong>split</strong></p></li><li><p><strong>replace</strong></p></li><li><p><strong>indexOf</strong></p></li><li><p><strong>intern</strong></p><p>需要特别注意的是，因为String是不可变的，所以上述的方法中例如concat()，substring()等方法均会返回一个new String()的实例。大多数不可变类都使用了这种模式。它被称为是<strong>函数式</strong>的做法。因为这些方法返回了一个函数的结果，而且对于原本的操作数并不进行修改。与之对应的还有 <strong>过程式</strong>的做法，通过这种方式则会对操作数的状态进行改变。</p></li></ul><h2 id="不可变性"><a href="#不可变性" class="headerlink" title="不可变性"></a>不可变性</h2><p>​        在<strong>Effective Java</strong>中的第15条<strong>使可变性最小化</strong>原则中，其为我们阐述了一个类要成为不可变需要遵循的5条规则：</p><ol><li><p><strong>不要提供任何会修改对象状态的方法</strong></p></li><li><p><strong>保证类不会被扩展</strong></p></li><li><p><strong>使所有的域都是final的</strong></p></li><li><p><strong>使所有的域都是私有的</strong></p></li><li><p><strong>确保对于任何可变组件的互斥访问</strong></p><p>上面已经提到String类本身是使用final关键字修饰的，而且其底层存储char[]也是使用final关键字修饰的，在设计和实现时，string已经严格遵循不可变的原则，那么，不可变性的优点和缺点是什么呢？在effectice java一书中也有具体的解释。</p><p>优点:</p><p>不可变对象本质上是线程安全的，他们不要求同步。</p><p>不可变对象可以自由的被共享，不需要进行保护性拷贝。</p><p>缺点：</p><p>对于每个不同的值都需要维护一个单独的对象。</p></li></ol><h2 id="equals和hashcode"><a href="#equals和hashcode" class="headerlink" title="equals和hashcode"></a>equals和hashcode</h2><p>​        String类重写了Object的equals和hashcode方法，其中equals判断不仅比较了引用地址，而且也比较了值，而hashcode的计算如下:</p><p><img src="..\images\string_2.png" alt=""></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;pre&gt;</span><br><span class="line">s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]</span><br><span class="line">&lt;/pre&gt;</span><br></pre></td></tr></table></figure><p>​        在jdk中对于string的hashcode算法如上述公式，至于为什么选择31，个人觉得首先31是个质数，使用质数算出来的hashcode碰撞概率要小，其次31与2^5靠近，底层计算应该会更加便捷。</p><h2 id="常见面试题"><a href="#常见面试题" class="headerlink" title="常见面试题"></a>常见面试题</h2><ol><li><p>​    Q：String为什么是不可变的？</p><p>​    A：</p></li><li><p>​    Q：创建多少个对象问题？</p><p>​    A：</p></li></ol><p>   ​    </p>]]></content>
     
     <summary type="html">
     
