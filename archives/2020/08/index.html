@@ -17,21 +17,16 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Springboot | Supertheme</title>
-  <meta name="description" content="##springboot的目标  为所有Spring开发者提供一个更快且更广泛的入门体验 开箱即用且能快速应对需求的变化(开闭原则) 提供一系列与原先大型项目等价的基础服务(嵌入式中间件,security health check) 消除XML配置##环境搭建   Springboot 2.1.1.RELEASE JAVA 8 Spring Framework 5.1.3.RELEASE Mave">
-<meta name="keywords" content="springboot">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Springboot">
-<meta property="og:url" content="https://supertheme.github.io/springboot/index.html">
+  <title>归档: 2020/8 | Supertheme</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="supertheme">
+<meta property="og:url" content="https://supertheme.github.io/archives/2020/08/index.html">
 <meta property="og:site_name" content="supertheme">
-<meta property="og:description" content="##springboot的目标  为所有Spring开发者提供一个更快且更广泛的入门体验 开箱即用且能快速应对需求的变化(开闭原则) 提供一系列与原先大型项目等价的基础服务(嵌入式中间件,security health check) 消除XML配置##环境搭建   Springboot 2.1.1.RELEASE JAVA 8 Spring Framework 5.1.3.RELEASE Mave">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-14T14:48:01.127Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Springboot">
-<meta name="twitter:description" content="##springboot的目标  为所有Spring开发者提供一个更快且更广泛的入门体验 开箱即用且能快速应对需求的变化(开闭原则) 提供一系列与原先大型项目等价的基础服务(嵌入式中间件,security health check) 消除XML配置##环境搭建   Springboot 2.1.1.RELEASE JAVA 8 Spring Framework 5.1.3.RELEASE Mave">
+<meta name="twitter:title" content="supertheme">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://supertheme.github.io/springboot/index.html">
+  <link rel="canonical" href="https://supertheme.github.io/archives/2020/08/index.html">
   
     <link rel="alternate" href="/atom.xml" title="supertheme" type="application/atom+xml">
   
@@ -319,159 +314,48 @@
   
   
 <main class="main" role="main">
-  <div class="content">
-  <article id="post-springboot" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  	<article class="content article article-archives article-type-list" itemscope="">
+	    <header class="article-header">
+	      <h1 itemprop="title">归档: 2020/8</h1>
+	      <p class="text-muted">共 1 篇文章</p>
+	    </header>
+	    <div class="article-body">
+	      
+  
+  
     
-    <div class="article-header">
+    
       
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Springboot
-    </h1>
-  
-
       
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/springboot/" class="article-date">
-	  <time datetime="2018-12-30T11:44:05.571Z" itemprop="datePublished">2018-12-30</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/spring/">spring</a>
-  </span>
-
-        
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/springboot/">springboot</a>
-  </span>
-
-
-        
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/springboot/#comments" class="article-comment-link">评论</a></span>
-        
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <p>##springboot的目标</p>
-<ol>
-<li>为所有Spring开发者提供一个更快且更广泛的入门体验</li>
-<li>开箱即用且能快速应对需求的变化(开闭原则)</li>
-<li>提供一系列与原先大型项目等价的基础服务(嵌入式中间件,security health check)</li>
-<li>消除XML配置<br>##环境搭建</li>
-</ol>
-<ul>
-<li>Springboot 2.1.1.RELEASE</li>
-<li>JAVA 8</li>
-<li>Spring Framework 5.1.3.RELEASE</li>
-<li>Maven 3.3+</li>
-<li>Tomcat 9.0</li>
-</ul>
-<h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h3><ol>
-<li>因为spring默认el表达式的占位符是${..}风格的，所有如果要使用Maven filtering,请使用@..@的格式，或者在maven propert中重新定义resource.delimiter</li>
-</ol>
-<h3 id="Externalized-Configuration"><a href="#Externalized-Configuration" class="headerlink" title="Externalized Configuration"></a>Externalized Configuration</h3><ul>
-<li>配置随机值</li>
-</ul>
-<ol>
-<li><strong>RandomValuePropertySource</strong> 可以使用${random.value}等表达式配置随机值</li>
-</ol>
-<ul>
-<li>获取命令行参数值</li>
-</ul>
-<ol>
-<li>SpringApplication将命令行参数(以–开头)转化为Property，并且可以通过<strong>Environment</strong>访问到,如果不希望Environment访问到，可以配置如下：SpringApplication.setAddCommandLineProperties(false)</li>
-</ol>
-<ul>
-<li>配置文件</li>
-</ul>
-<p>1. </p>
-
-      
-    </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
+      <section class="panel panel-default b-no">
+        <div class="panel-heading" role="tab">
+          <h3 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2020" aria-expanded="true">
+              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
+              2020
+            </a>
+            <!-- <a href="/archives/2020" class="archive-year">2020</a> -->
+          </h3>
+        </div>
+        <div id="collapse2020" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2020">
+        <div class="panel-body">
+          <div class="collection">
     
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="https://supertheme.github.io/springboot/" title="Springboot" target="_blank" rel="external">https://supertheme.github.io/springboot/</a>
-    </li>
     
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote>
-
-
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/supertheme" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/author.jpg" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/supertheme" target="_blank"><span class="text-dark">supertheme</span><small class="ml-1x"></small></a></h3>
-        <div>个人简介。</div>
-      </div>
-    </figure>
-  </div>
-</div>
-
-
-    </div>
-  </article>
-  
-    
-  <section id="comments">
-  	
-      <div id="vcomments"></div>
-    
-  </section>
+<a href="/greenCode/" class="collection-item" target="_blank" itemprop="url">
+  <time datetime="2020-08-22T05:23:56.000Z" itemprop="datePublished">2020-08-22</time>
+  <span>&nbsp;&nbsp;&nbsp;</span> greenCode
+</a>
 
 
   
-</div>
-
-  <nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
   
-  <ul class="pager pull-left">
-    
-    <li class="prev">
-      <a href="/新文档/" title="var 的奇怪作用域"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/Java_Collection_ArrayList/" title="ArrayList"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
-    
-    
-  </ul>
-  
-  
-  
-  <div class="bar-right">
-    
-    <div class="share-component" data-sites="weibo,qq,wechat" data-mobile-sites="weibo,qq,qzone"></div>
-    
-  </div>
-  </div>
-</nav>
+    </div></div></div></section>
   
 
-
+	    </div>
+  	</article>
+  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -520,37 +404,6 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
-
-   
-
-
-
-
-   
-    
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine"></script>
-  <script type="text/javascript">
-  var GUEST = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link';
-  meta = meta.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#vcomments',
-    verify: false,
-    notify: false,
-    appId: '',
-    appKey: '',
-    placeholder: 'Just go go',
-    avatar: 'mm',
-    meta: meta,
-    pageSize: '10' || 10,
-    visitor: false
-  });
-  </script>
-
-     
 
 
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://supertheme.github.io/"/>
-  <updated>2020-07-15T02:48:00.834Z</updated>
+  <updated>2020-08-22T05:29:19.382Z</updated>
   <id>https://supertheme.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>greenCode</title>
+    <link href="https://supertheme.github.io/greenCode/"/>
+    <id>https://supertheme.github.io/greenCode/</id>
+    <published>2020-08-22T05:23:56.000Z</published>
+    <updated>2020-08-22T05:29:19.382Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="../images/greenCode.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;../images/greenCode.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Java基础—String</title>
@@ -434,36 +457,6 @@
     
     
       <category term="前端" scheme="https://supertheme.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Springboot</title>
-    <link href="https://supertheme.github.io/springboot/"/>
-    <id>https://supertheme.github.io/springboot/</id>
-    <published>2018-12-30T11:44:05.571Z</published>
-    <updated>2020-02-14T14:48:01.127Z</updated>
-    
-    <content type="html"><![CDATA[<p>##springboot的目标</p><ol><li>为所有Spring开发者提供一个更快且更广泛的入门体验</li><li>开箱即用且能快速应对需求的变化(开闭原则)</li><li>提供一系列与原先大型项目等价的基础服务(嵌入式中间件,security health check)</li><li>消除XML配置<br>##环境搭建</li></ol><ul><li>Springboot 2.1.1.RELEASE</li><li>JAVA 8</li><li>Spring Framework 5.1.3.RELEASE</li><li>Maven 3.3+</li><li>Tomcat 9.0</li></ul><h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h3><ol><li>因为spring默认el表达式的占位符是${..}风格的，所有如果要使用Maven filtering,请使用@..@的格式，或者在maven propert中重新定义resource.delimiter</li></ol><h3 id="Externalized-Configuration"><a href="#Externalized-Configuration" class="headerlink" title="Externalized Configuration"></a>Externalized Configuration</h3><ul><li>配置随机值</li></ul><ol><li><strong>RandomValuePropertySource</strong> 可以使用${random.value}等表达式配置随机值</li></ol><ul><li>获取命令行参数值</li></ul><ol><li>SpringApplication将命令行参数(以–开头)转化为Property，并且可以通过<strong>Environment</strong>访问到,如果不希望Environment访问到，可以配置如下：SpringApplication.setAddCommandLineProperties(false)</li></ol><ul><li>配置文件</li></ul><p>1. </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;##springboot的目标&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;为所有Spring开发者提供一个更快且更广泛的入门体验&lt;/li&gt;
-&lt;li&gt;开箱即用且能快速应对需求的变化(开闭原则)&lt;/li&gt;
-&lt;li&gt;提供一系列与原先大型项目等价的基础服务(嵌入式中间件,security heal
-      
-    
-    </summary>
-    
-    
-      <category term="spring" scheme="https://supertheme.github.io/categories/spring/"/>
-    
-    
-      <category term="springboot" scheme="https://supertheme.github.io/tags/springboot/"/>
     
   </entry>
   
